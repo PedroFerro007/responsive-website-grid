@@ -268,36 +268,42 @@ img {
         background: url(../img/venom/venom-icon.png);
         background-repeat: no-repeat;
         background-position: center;
+        background-size: contain;
     }
 
     .section .bio-img.widow {
         background: url(../img/black-widow/widow-icon.png);
         background-repeat: no-repeat;
         background-position: center;
+        background-size: contain;
     }
 
     .section .bio-img.moon-knight {
         background: url(../img/moon-knight/moon-knight-icon.png);
         background-repeat: no-repeat;
         background-position: center;
+        background-size: contain;
     }
 
     .section .bio-img.ms-marvel {
         background: url(../img/ms-marvel/ms-marvel-icon.png);
         background-repeat: no-repeat;
         background-position: center;
+        background-size: contain;
     }
 
     .section .bio-img.deadpool {
         background: url(../img/deadpool/deadpool-icon.png);
         background-repeat: no-repeat;
         background-position: center;
+        background-size: contain;
     }
 
     .section .bio-img.iron-man {
         background: url(../img/iron-man/iron-man-icon.png);
         background-repeat: no-repeat;
         background-position: center;
+        background-size: contain;
     }
 
     .comic-grid {
@@ -357,6 +363,7 @@ img {
 
     .grid-structure .aside img {
         border-radius: unset;
+        width: 100%;
     }
 
     .aside .card {
