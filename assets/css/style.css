@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+
+h1 {
+    font-family: 'Title-Font', Times, serif;
+}
+
+
+
+@font-face {
+    font-family: 'Title-Font';
+    src: url('Bebas-Regular.otf');
+}
+
+
+@font-face {
+    font-family: 'Marvel';
+    src: url('mask.ttf');
+}
+
+body {
+    font-family: 'Marvel', Times, serif;
+    background-color: #151515;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Configurando o layout */
+
+.grid-structure {
+    display: grid;
+    grid-template-columns: minmax(400px, 1fr) 3fr;
+    grid-template-areas: 
+    "aside section"
+    "section2 section2"
+    "footer footer";
+}
+
+
+
+.header {
+    text-align: center;
+    background-color: #202020;  
+
+}
+.line {
+    width: 100%;
+    border-top: 1px solid #393939;
+}
+
+#btn-mobile {
+    display: none;
+}
+
+.header ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.header ul li {
+    margin: 5px;
+    background-color: #ffff;
+    border-radius: 0px 10px 0px 10px;
+    border: 3px solid black;
+    padding: 0px 15px 0 15px ;
+    font-weight: 580;
+}
+
+
+
+.grid-structure .aside {
+    padding: 40px;
+    grid-area: aside;
+    background: #151515;
+}
+
+.grid-structure .aside img {
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+}
+
+.aside .card {
+    text-align: center;
+    position: relative;
+    bottom: 5px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    background: #ffff;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+
+   
+}
+
+
+.grid-structure .section {
+    grid-area: section;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 40px;
+    gap: 40px;
+}
+
+.section {
+    background-color: #151515;
+    background-size: cover;
+    background-position: center center;
+}
+
+.title {
+    color: #ffff;
+    font-size: 70px;
+    
+}
+
+.section h1 {
+    grid-column: span 2;
+}
+
+.section .container {
+    grid-column: span 2;
+    padding: 20px;
+    background-color: #ffff;
+    border: 3px solid;
+    border-radius: 0px 20px 0px 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr)
+}
+
+.section h5{
+    font-size: 35px;
+}
+
+.section .container p {
+    font-size: 20px;
+}
+
+.section .biografia {
+    color: #ffff;
+    font-size: 25px;
+}
+
+.section .bio-img.venom {
+    background: url(../img/venom/venom-p.png);
+    background-repeat: no-repeat;
+}
+
+.section .bio-img.widow {
+    background: url(../img/black-widow/widow-p.png);
+    background-repeat: no-repeat;
+}
+
+.section .bio-img.moon-knight {
+    background: url(../img/moon-knight/moon-knight-p.png);
+    background-repeat: no-repeat;
+}
+
+.section .bio-img.ms-marvel {
+    background: url(../img/ms-marvel/ms-marvel-p.png);
+    background-repeat: no-repeat;
+}
+
+.section .bio-img.deadpool {
+    background: url(../img/deadpool/deadpool-p.png);
+    background-repeat: no-repeat;
+}
+
+.section .bio-img.iron-man {
+    background: url(../img/iron-man/iron-man-p.png);
+    background-repeat: no-repeat;
+}
+
+
+
+.section2 {
+    grid-area: section2;
+    background-image: url(../img/comic-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    padding: 20px;
+
+}
+
+.section2 h1{
+    font-size: 50px;
+    text-align: center;
+}
+
+.comic-grid {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    row-gap: 25px;
+}
+
+.comic-grid img{
+    border: 2px solid black;
+}
+
+.description {
+    margin-top: 5px;
+    padding: 5px;
+    display: block;
+    background-color: #ffff;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.grid-structure .footer {
+    padding: 40px;
+    grid-area: footer;
+    background:#000;
+    text-align: center;
+}
+
+.footer > p{
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.footer-flex {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+@media (max-width: 1208px) {
+
+    .section .biografia {
+        font-size: 20px;
+        grid-column: 1 / -1;
+        order: 2;
+    }
+    .section .bio-img {
+    order: 1;
+    grid-column: 1 / -1;
+    height: 299px;
+    }
+
+    .section .bio-img.venom {
+        background: url(../img/venom/venom-icon.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .section .bio-img.widow {
+        background: url(../img/black-widow/widow-icon.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .section .bio-img.moon-knight {
+        background: url(../img/moon-knight/moon-knight-icon.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .section .bio-img.ms-marvel {
+        background: url(../img/ms-marvel/ms-marvel-icon.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .section .bio-img.deadpool {
+        background: url(../img/deadpool/deadpool-icon.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .section .bio-img.iron-man {
+        background: url(../img/iron-man/iron-man-icon.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .comic-grid {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+    }
+    
+}
+
+@media (max-width: 1022px){
+
+.footer > p{
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.footer-flex {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+
+}    
+
+.aside .card {
+       grid-template-columns: auto;
+    }
+
+
+.grid-structure {  
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    "aside"
+    "section"
+    "section2"
+    "footer"
+    }
+
+
+.grid-structure .aside{
+    padding: 20px 122px 0 122px;
+}
+
+.section .container {
+    grid-template-columns: auto;
+   }
+
+   .section .container div {
+       margin-bottom: 40px;
+   }
+}
+
+@media (max-width: 690px){
+
+    .grid-structure .aside{
+        padding: 0px;
+    }
+
+    .grid-structure .aside img {
+        border-radius: unset;
+    }
+
+    .aside .card {
+        font-size: 10px;
+        border-radius: unset;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .header {
+        box-sizing: border-box;
+        height: 70px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 69px;
+        right: 0px;
+        background: #202020;
+        transition: 0.6s;
+        z-index: 1000;
+        height: 0px;
+        visibility: hidden;
+        overflow-y: hidden;
+      }
+
+      #menu li {
+          background: none;
+          color: #fff;
+          border: none;
+          padding: 5px;
+          border-bottom: #393939;
+      }
+      #navegacao.active #menu {
+        height: calc(60vh - 69px);
+        visibility: visible;
+       
+      }
+
+      #close {
+          display: none;
+      }
+
+      #navegacao.active #hamburguer{
+        display: none;
+    }
+      
+      #navegacao.active #close{
+          display: block;
+      }
+
+      #menu a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+
+      }
+      #btn-mobile {
+        color: #fff;
+        display: flex;
+        font-size: 2rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+      }
+
+    
+
+
+}
+
+@media (max-width: 383px) {
+    .grid-structure .bio-img {
+        background-size: 100% 100%;
+    }
+}
+
+
